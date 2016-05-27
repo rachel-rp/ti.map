@@ -106,7 +106,7 @@ public class TiUIMapView extends TiUIFragment implements GoogleMap.OnMarkerClick
 		
 		if (map == null && retries < 10) {
 			Log.w(TAG, "Cannot load map. Retrying");
-			sendMessage();
+			//sendMessage();
 			retries++;
 			return;
 		}
@@ -169,6 +169,9 @@ public class TiUIMapView extends TiUIFragment implements GoogleMap.OnMarkerClick
 		if (d.containsKey(TiC.PROPERTY_REGION)) {
 			updateCamera(d.getKrollDict(TiC.PROPERTY_REGION));
 		}
+        if (d.containsKey(MapModule.PROPERTY_ROTATE_ENABLED)) {
+            map.getUiSettings().setRotateGesturesEnabled(d.getBoolean(MapModule.PROPERTY_ROTATE_ENABLED));
+        }
 		if (d.containsKey(TiC.PROPERTY_ANNOTATIONS)) {
 			Object[] annotations = (Object[]) d.get(TiC.PROPERTY_ANNOTATIONS);
 			addAnnotations(annotations);

@@ -23,6 +23,7 @@ public class MapModule extends KrollModule
 	public static final String PROPERTY_DRAGGABLE = "draggable";
 	public static final String PROPERTY_POINTS = "points";
 	public static final String PROPERTY_TRAFFIC = "traffic";
+    public static final String PROPERTY_ROTATE_ENABLED = "rotateEnabled";
 	public static final String PROPERTY_MAP = "map";
 	public static final String PROPERTY_NEWSTATE = "newState";
 	public static final String PROPERTY_CUSTOM_VIEW = "customView";
